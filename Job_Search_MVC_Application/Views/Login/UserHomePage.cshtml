@@ -1,0 +1,13 @@
+﻿@model Job_Search_MVC_Application.Models.Login
+@{
+    ViewBag.Title = "UserHomePage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>UserHomePage</h2>
+
+<div>
+    <ul>
+        <li>@Html.ActionLink("Click here to view jobs", "Searchjob_Pageload", "Job_Search")</li>
+    </ul>
+</div>

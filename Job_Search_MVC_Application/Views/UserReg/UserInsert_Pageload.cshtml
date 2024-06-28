@@ -1,0 +1,131 @@
+﻿@model Job_Search_MVC_Application.Models.UserRegister
+@{
+    ViewBag.Title = "UserInsert_Pageload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>USER REGISTER</h2>
+<div>
+    @using (Html.BeginForm("UserInsert_Click", "UserReg", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div>
+            <label>Name</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsName)
+            @Html.ValidationMessageFor(m => m.UsName)
+        </div>
+
+        <div>
+            <label>Age</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsAge)
+            @Html.ValidationMessageFor(m => m.UsAge)
+        </div>
+
+        <div>
+            <label>Address</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsAddress)
+            @Html.ValidationMessageFor(m => m.UsAddress)
+        </div>
+        <div>
+            <label>Phone</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsPhone)
+            @Html.ValidationMessageFor(m => m.UsPhone)
+        </div>
+
+
+
+        <div>
+            <label>Email</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsEmail)
+            @Html.ValidationMessageFor(m => m.UsEmail)
+        </div>
+
+        <div>
+            <label>Pincode</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsPincode)
+            @Html.ValidationMessageFor(m => m.UsPincode)
+        </div>
+
+        <div>
+            <label>State</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsState)
+            @Html.ValidationMessageFor(m => m.UsState)
+        </div>
+
+        <div>
+            <label>District</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsDist)
+            @Html.ValidationMessageFor(m => m.UsDist)
+        </div>
+
+        <div>
+            <label>Qualification</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsQual)
+            @Html.ValidationMessageFor(m => m.UsQual)
+        </div>
+
+        <div>
+            <label>Skills</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsSkills)
+            @Html.ValidationMessageFor(m => m.UsSkills)
+        </div>
+
+        <div>
+            <label>Experience</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.UsExp)
+            @Html.ValidationMessageFor(m => m.UsExp)
+        </div>
+
+
+        <div>
+            <label>Username</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.Username)
+            @Html.ValidationMessageFor(m => m.Username)
+        </div>
+
+        <div>
+            <label>Password</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.Password)
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+
+        <div>
+                <label>Confirm Password</label>
+            </div>
+            <div>
+                @Html.TextBoxFor(m => m.Confirmpassword)
+                @Html.ValidationMessageFor(m => m.Confirmpassword)
+            </div>
+
+        <div>
+            <input type="submit" value="Insert" />
+            @Html.DisplayFor(m => m.Usermsg)
+        </div>
+    }
+</div>
+

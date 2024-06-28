@@ -1,0 +1,82 @@
+﻿@model Job_Search_MVC_Application.Models.JobAdd
+@{
+    ViewBag.Title = "AddJob_PageLoad";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddJob</h2>
+@using (Html.BeginForm("addjob_click", "AddJob", FormMethod.Post))
+{
+    <div>
+        <label>Jobname</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.jobname)
+    </div>
+
+    <div>
+        <label>Number of vacancy</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.numofvacancy)
+    </div>
+
+    <div>
+        <label>Required Skills</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.reqskills)
+    </div>
+
+    <div>
+        <label>Job Description</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.jobdescription)
+    </div>
+
+    <div>
+        <label>Salary</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.salary)
+    </div>
+    <div>
+        <label>Qualification</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.qualifi)
+    </div>
+    <div>
+        <label>Job Status</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.jstatus)
+    </div>
+
+    <div>
+        <label>Entry Date</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.entrydate)
+    </div>
+
+    <div>
+        <label>Last apply Date</label>
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.lastappldate)
+    </div>
+
+    <div>
+        <input type="submit" value="Insert" />
+        @Html.DisplayFor(m => m.msg)
+    </div>
+    <div>
+        <ul>
+            <li>@Html.ActionLink("Back to Home", "AdminCompanyHomePage", "Login")</li>
+        </ul>
+    </div>
+
+}
+

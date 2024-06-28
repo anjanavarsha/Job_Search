@@ -1,0 +1,73 @@
+﻿@model Job_Search_MVC_Application.Models.CompanyRegister
+@{
+    ViewBag.Title = "InsertCompany_Pageload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Company Registration</h2>
+
+<div>
+    @using (Html.BeginForm("InsertCompany_click", "CompanyReg", FormMethod.Post))
+    {
+        <div>
+            <label>Name</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.ComName)
+            @Html.ValidationMessageFor(m => m.ComName)
+        </div>
+
+        <div>
+            <label>Address</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.ComAddress)
+            @Html.ValidationMessageFor(m => m.ComAddress)
+        </div>
+
+        <div>
+            <label>Phone</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.ComPhone)
+            @Html.ValidationMessageFor(m => m.ComPhone)
+        </div>
+
+        <div>
+            <label>Email</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.ComEmail)
+            @Html.ValidationMessageFor(m => m.ComEmail)
+        </div>
+
+        <div>
+            <label>Username</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.Username)
+            @Html.ValidationMessageFor(m => m.Username)
+        </div>
+
+        <div>
+            <label>Password</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.Password)
+            @*@Html.ValidationMessageFor(m => m.pass)*@
+        </div>
+
+        <div>
+            <label>Confirm Password</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.Confirmpassword)
+            @Html.ValidationMessageFor(m => m.Confirmpassword)
+        </div>
+
+        <div>
+            <input type="submit" value="Insert" />
+            @Html.DisplayFor(m => m.ComMsg)
+        </div>
+    }
+</div>
